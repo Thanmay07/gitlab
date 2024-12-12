@@ -1,0 +1,61 @@
+
+1. Initialize a new git repository in a directory. Create new file(add to staging area and commit the changes with appropriate commit messages.
+mkdir rakshith
+cd rakshith
+git init
+touch myfile.txt
+git add myfile.txt
+git commit -m "Adda new called myfile.txt"
+git log --oneline
+
+
+2. Create a new branch name "feature-branch". Switch to "master" branch. Merge the "feature-branch" into master
+git checkout -b feature-branch
+git checkout feature-branch
+vi p2.txt
+git add p2.txt
+git commit -m "my message"
+git checkout master
+git merge feature-branch
+git log --oneline
+
+3. Write the commands to stash your changes, switch branches, and then apply the stashes changes.
+git checkout -b new
+git checkout new
+vi p3.txt
+git add p3.txt
+git stash save "message"
+git checkout master
+git stash apply
+
+4. Clone a remote git repository to your local machine(cloning)
+Create GitHub accout
+Create a new git repository
+Create a new file
+Click on "code" button
+copy url from https tab
+Open git bash
+Create new file(mkdir and cd)
+git clone URL
+git log --oneline
+
+5. Fetch the latest changes from a remote repository and rebase you local branch onto the updated remote branch
+Create new repository in GitHub
+create new file and type anything
+commit changes
+open gitbash and paste 
+- git remote add origin 'url'
+  git remote
+  git fetch origin 
+  git log --oneline
+  git branch
+  git rebase orogin/main
+  git log --oneline
+
+6 Write the command to merge "feature-branch" into "master" while providing a custom commit message for the merge.
+git checkout -b new
+vi file.txt
+git add file.txt
+git commit -m "hello"
+git checkout master
+git merge new -m "file created"
