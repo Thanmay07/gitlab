@@ -59,3 +59,22 @@ git add file.txt
 git commit -m "hello"
 git checkout master
 git merge new -m "file created"
+
+#exp7
+git tag v1.0 <commit-SHA>  (hash value)
+
+#exp8
+git cherry-pick abc123^..def456 (these are start and end commmits)
+
+#exp9
+git show abc123
+git log -n1 abc123   (abc123 - commit value)
+
+#exp10
+git log --author"vishnu" --since="2023-01-01" --until="2024-12-31"
+
+#exp11
+git log -n 5
+
+#exp12
+git revert abc123
